@@ -1,0 +1,49 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Perfil
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+   <ion-card *ngIf="user">
+    <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+    <ion-card-header>
+      <ion-card-title> Bienvenido, {{ nombre }}</ion-card-title>
+      <ion-card-subtitle>Correo: {{user.email}}</ion-card-subtitle>
+    </ion-card-header>
+    "El que sufre antes de que sea necesario, sufre más que lo necesario". Esta es una famosa frase del filósofo estoico Séneca, que significa que si nos adelantamos a los problemas y sufrimos por ellos antes de que realmente ocurran, estamos haciendo que nuestro dolor sea más grande de lo que debería ser. En cambio, debemos enfrentar los problemas cuando realmente se presenten y tratar de no anticiparlos innecesariamente.
+    <ion-card-content>
+      
+    </ion-card-content>
+  </ion-card>
+
+  <ion-button expand="block" (click)="logout()">Cerrar sesión</ion-button>
+</ion-content> -->
+
+
+
+
+    <ion-row class=" bg-primary" style="margin: auto; width: 100vw; height: 50vh;">
+      <button (click)="tomarFotoLindas()" class="btn btn-warning" style="margin: auto; width: 100vw; height: 50vh; background-image: url('../../assets/lindo.jpg'); background-size: cover; background-position: center; ">
+        <div class="d-flex align-items-end justify-content-center" style="height: 100%">
+          <div class="bg-primary bg-opacity-50 w-100 rounded-5">
+            <h1 class="text-white fw-bold  ">COSAS LINDAS</h1>
+          </div>
+        </div>
+      </button>
+    </ion-row>
+
+    <ion-row class="bg-danger" style="margin: auto; width: 100vw; height: 50vh;">
+      <button (click)="tomarFotoFeas()" class="btn btn-warning" style="margin: auto; width: 100vw; height: 50vh; background-image: url('../../assets/feas.jpg'); background-size: cover; background-position: center;">
+        <div class="d-flex align-items-end justify-content-center" style="height: 100%">
+          <div class="bg-danger bg-opacity-50 w-100 rounded-5">
+            <h1 class="text-white fw-bold">COSAS FEAS</h1>
+          </div>
+        </div>
+      </button>
+      
+    </ion-row>
+
+

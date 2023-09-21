@@ -1,0 +1,17 @@
+
+
+<ion-fab  vertical="bottom" horizontal="end" slot="fixed">
+  <ion-fab-button (click)="toHome()">
+    <ion-icon name="grid-outline"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
+<ion-fab *ngIf="isRoute('/cosasLindas') || isRoute('/cosasFeas') " vertical="bottom" horizontal="start" slot="fixed">
+  <ion-fab-button (click)="toMyPhotos()">
+    <ion-icon name="people"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
+<ion-fab *ngIf="isRoute('/mis/fotos')" vertical="bottom" horizontal="start" slot="fixed">
+  <ion-fab-button (click)="toMyLog()">
+    <ion-icon name="log-out-outline"></ion-icon>
+  </ion-fab-button>
+</ion-fab>

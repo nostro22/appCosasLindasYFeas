@@ -1,0 +1,40 @@
+<app-menu></app-menu>
+
+
+<canvas #pieCanvas></canvas>
+
+<!-- <button (click)="reload()">reload</button> -->
+<ion-fab vertical="Top" horizontal="end">
+  <ion-fab-button (click)="tomarFotos()">
+    <ion-icon name="camera"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
+<ion-content >
+  <ion-card *ngFor="let photo of photos" >
+    <!-- <h1>{{photo | json}}</h1> -->
+    <!-- <h1>{{usuarioActual | json}}</h1> -->
+    <!-- <h1>{{photo.liked | json}}</h1> -->
+    <ion-card-header>
+      <img alt="Silhouette of mountains" [src]="photo.imagen" />
+      <ion-card-title>{{photo.currentUser}}</ion-card-title>
+      <ion-card-subtitle class="d-flex">
+   
+        <div class="col-4">
+          {{photo.fecha}}
+        </div>
+        <div class="col-4 ">
+          Likes:{{photo.likes}}
+        </div>
+        <div class="p-2 bg-primary rounded-2 bg-opacity-50 text-danger">
+
+          <ion-icon *ngIf="(photo.liked)" (click)="quitarVoto(photo)" name="heart"></ion-icon>
+          <ion-icon *ngIf="!(photo.liked)" (click)="votar(photo)" name="heart-outline"></ion-icon>
+        </div>
+        
+      </ion-card-subtitle>
+   
+    </ion-card-header>
+  
+   
+  </ion-card>
+</ion-content>
